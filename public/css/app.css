@@ -1,0 +1,23 @@
+.body-bag {
+    background-color: white;
+    font-family: "Ringside Regular A","Ringside Regular B",sans-serif;
+  font-size: 16px;
+  color: #393B3C;
+}
+
+.imgPopup {
+    max-width: 100%;
+}
+
+.mapboxgl-popup {
+    max-width: 500px;
+    font: 12px/20px "Ringside Regular A","Ringside Regular B",sans-serif;
+}
+
+.custom-link {
+    color: #008294;
+}    
+
+.show {
+    display: block;
+}

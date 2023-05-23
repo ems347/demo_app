@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">new photo</h1>
+    <div class="col-6 offset-3">
+        <form action="/submissions" method="post" enctype="multipart/form-data" novalidate class="validated-form">
+            <div class="mb-3">
+                <label for="address" class="form-label" id="address">full address of photo location</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="e.g. 100 Main St.">
+            </div>
+           <div class="mb-3">
+            <label for="title" class="form-label" id="title">image title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="e.g. my ass" required>
+           </div>
+            <div class="mb-3">
+                <label for="description"  class="form-label" id="description">image description</label>
+                <input type="textarea" class="form-control" name="description" id="description" placeholder="e.g. i am a hottie with a body" required>
+            </div>
+            <div class="mb-3">
+                <input type="file" name="image" id="">
+            </div>
+              <div class="mb-3">
+                <button class="btn btn-success">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
