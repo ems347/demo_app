@@ -7,13 +7,15 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav">
             <a class="nav-link" href="/">map</a>
-            <!-- <a class="nav-link" href="/blog">blog</a> -->
+            <a class="nav-link" href="/blogs">blog</a>
             
         </div>
         <% if(currentUser) {%>
           <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="/submissions/new">New Submission</a>
-            <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" href="/submissions/new">new photo</a>
+            <a class="nav-link" href="/submissions">photos (list view)</a>
+            <a class="nav-link" href="/blogs/new">new blog</a>
+            <a class="nav-link" href="/logout">logout</a>
           </div>
         <% } %>
       </div>

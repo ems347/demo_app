@@ -15,7 +15,7 @@
                     <strong>description:</strong> <%= plastic.description %>
                 <br><strong>location:</strong> <%= plastic.address %></p>
                 <% if(currentUser) {%>
-                    <h4>Admin controls</h4>
+                <p><strong>private notes:</strong> <%= plastic.notes %></p>
                 <a class="btn btn-info" href="/submissions/<%=plastic.id%>/edit">Edit <%= plastic.title %></a>
                 <form action="/submissions/<%=plastic.id%>?_method=DELETE" method="POST"><button class="btn btn-danger">Delete <%= plastic.title %></button></form>
                 <% } %>

@@ -16,7 +16,4 @@ router.route('/login')
 
 router.get('/logout', users.logout)
 
-router.route('/blog')
-    .get(users.renderAbout)
-
 module.exports = router; 

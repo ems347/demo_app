@@ -37,6 +37,4 @@ module.exports.logout = (req, res, next) => {
       });
 }
 
-module.exports.renderAbout =  (req, res) => {
-    res.render('users/blog');
-}
+

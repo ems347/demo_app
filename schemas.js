@@ -29,7 +29,7 @@ module.exports.plasticSchema = Joi.object({
         address: Joi.string().required(),
         image: Joi.string(),
         deleteImages: Joi.array(),
-        coordinates: Joi.string(),
+        notes: Joi.string().allow('', null),
 });
 
 

@@ -11,7 +11,6 @@ module.exports.index = async (req, res) => {
 }
 
 
-
 module.exports.renderNewSubmissionForm = (req, res) => {
     res.render('submissions/new')
 }

@@ -22,6 +22,8 @@ const Plastic = require('./models/plastics');
 const { findById } = require("./models/plastics");
 const {plasticSchema} = require('./schemas.js');
 const submissionRoutes = require('./routes/submissions');
+const Blog = require('./models/blog');
+const blogRoutes = require('./routes/blog');
 const User = require('./models/user');
 const userRoutes = require('./routes/users');
 const isLoggedIn = require('./middleware')
@@ -96,10 +98,12 @@ app.use((req, res, next) => {
 
 app.use('/', userRoutes);
 app.use('/submissions', submissionRoutes);
+app.use('/blogs', blogRoutes);
 
 app.get('/', async (req, res) => {
     const plastics = await Plastic.find({})
-    res.render('home', {plastics})
+    const blogs = await Blog.find({})
+    res.render('home', {plastics, blogs})
 });
 
 app.all('*', (req, res, next) => {
