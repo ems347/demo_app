@@ -7,10 +7,14 @@
                 <label for="address" class="form-label" id="address">full address of photo location</label>
                 <input type="text" class="form-control" name="address" id="address" required value="<%=plastic.address%>">
             </div>
-            <!-- <div class="mb-3">
-                <label for="coordinates" class="form-label" id="coordinates">coordinates</label>
-                <input type="text" class="form-control" name="coordinates" id="coordinates" required value="<%=plastic.geometry.coordinates%>">
-               </div> -->
+            <div class="mb-3">
+                <label for="latitude" class="form-label" id="latitude">latitude</label>
+                <input type="number" step="any" class="form-control" name="latitude" id="latitude" required value="<%= plastic.geometry.coordinates[1] %>">
+               </div>
+               <div class="mb-3">
+                <label for="longitude" class="form-label" id="longitude">longitude</label>
+                <input type="number" step="any" class="form-control" name="longitude" id="longitude" required value="<%= plastic.geometry.coordinates[0] %>">
+               </div>
            <div class="mb-3">
             <label for="title" class="form-label" id="title">image title</label>
             <input type="text" class="form-control" name="title" id="title" required value="<%=plastic.title%>">

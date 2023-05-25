@@ -15,7 +15,9 @@
                     <strong>description:</strong> <%= plastic.description %>
                 <br><strong>location:</strong> <%= plastic.address %></p>
                 <% if(currentUser) {%>
-                <p><strong>private notes:</strong> <%= plastic.notes %></p>
+                <p><strong>private notes:</strong> <%= plastic.notes %> <br>
+                <strong>lat:</strong> <%= plastic.geometry.coordinates[1] %> <br>
+            <strong>long:</strong> <%= plastic.geometry.coordinates[0] %> </p>
                 <a class="btn btn-info" href="/submissions/<%=plastic.id%>/edit">Edit <%= plastic.title %></a>
                 <form action="/submissions/<%=plastic.id%>?_method=DELETE" method="POST"><button class="btn btn-danger">Delete <%= plastic.title %></button></form>
                 <% } %>

@@ -46,6 +46,11 @@ module.exports.renderEditForm = async (req, res) => {
 
 module.exports.editSubmission = async (req, res) => {
     const plastic = await Plastic.findByIdAndUpdate(req.params.id, req.body);
+    const latitude = Number(req.body.latitude);
+    const longitude = Number(req.body.longitude);
+    plastic.geometry.coordinates[1] = latitude;
+    plastic.geometry.coordinates[0] = longitude;
+    await plastic.save();
     console.log(req.body);
     req.flash('success', 'Success!');
     res.redirect(`./${plastic._id}`)

@@ -30,6 +30,8 @@ module.exports.plasticSchema = Joi.object({
         image: Joi.string(),
         deleteImages: Joi.array(),
         notes: Joi.string().allow('', null),
+        latitude: Joi.number(),
+        longitude: Joi.number(),
 });
 
 
