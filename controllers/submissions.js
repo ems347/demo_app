@@ -18,7 +18,7 @@ module.exports.renderNewSubmissionForm = (req, res) => {
 module.exports.newSubmission = async (req, res, next) => {
     const geoData = await geocoder.forwardGeocode({
         query: req.body.address,
-        countries: ['us', 'gb', 'ie'],
+        countries: ['ie', 'gb'],
         limit: 1
       }).send();
     const newPlastic = new Plastic(req.body);
