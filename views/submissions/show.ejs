@@ -13,9 +13,10 @@
                 <h1 class="card-title"><%= plastic.title %></h1>
                 <p class="card-body">
                     <strong>description:</strong> <%= plastic.description %>
-                <br><strong>location:</strong> <%= plastic.address %></p>
+               
                 <% if(currentUser) {%>
-                <p><strong>private notes:</strong> <%= plastic.notes %> <br>
+                    <br><strong>location:</strong> <%= plastic.address %>
+                <br><strong>private notes:</strong> <%= plastic.notes %> <br>
                 <strong>lat:</strong> <%= plastic.geometry.coordinates[1] %> <br>
             <strong>long:</strong> <%= plastic.geometry.coordinates[0] %> </p>
                 <a class="btn btn-info" href="/submissions/<%=plastic.id%>/edit">Edit <%= plastic.title %></a>
