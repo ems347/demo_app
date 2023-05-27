@@ -103,16 +103,14 @@ map.on('load', () => {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
      
-    new mapboxgl.Marker({
+    new mapboxgl.Popup({
+        offset: 25,
         draggable: true
     })
     .setLngLat(coordinates)
-    .setPopup(
-        new mapboxgl.Popup({offset: 25})
-        .setHTML(
+    .setHTML(
             text
         )
-    )
     .addTo(map);
     });
      
