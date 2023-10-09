@@ -25,14 +25,14 @@ module.exports.renderLogin =  (req, res) => {
 }
 
 module.exports.login = (req, res) => {
-    req.flash('success', 'Welcome back!');
+    req.flash('success', 'welcome back!');
     res.redirect('./')
 }
 
 module.exports.logout = (req, res, next) => {
     req.logout(function(err) {
         if (err) { return next(err); }
-        req.flash('success', 'Logged out successfully');
+        req.flash('success', 'logged out successfully');
         res.redirect('./');
       });
 }

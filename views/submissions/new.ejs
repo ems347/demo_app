@@ -1,11 +1,12 @@
 <% layout('layouts/boilerplate')%>
+<% if(currentUser) {%>
 <div class="row">
     <h1 class="text-center">new photo</h1>
     <div class="col-6 offset-3">
         <form action="/submissions" method="post" enctype="multipart/form-data" novalidate class="validated-form">
             <div class="mb-3">
-                <label for="address" class="form-label" id="address">full address of photo location [including country - as much info as you can provide for most accurate results]</label>
-                <input type="text" class="form-control" name="address" id="address" placeholder="31 Drumcullen Rd, Dungannon, Northern Ireland">
+                <label for="address" class="form-label" id="address">full address of photo location </label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="5 Robert St, Corrimal NSW 2518, Australia">
             </div>
            <div class="mb-3">
             <label for="title" class="form-label" id="title">image title</label>
@@ -17,7 +18,7 @@
             </div>
             <div class="mb-3">
                 <label for="notes" class="form-label" id="notes">private notes (not displayed publicly)</label>
-                <input type="textarea" class="form-control" name="notes" id="notes" placeholder="i saw a hottie with a body" required>
+                <input type="textarea" class="form-control" name="notes" id="notes" placeholder="i saw a hottie with a body">
             </div>
             <div class="mb-3">
                 <input type="file" name="image" id="">
@@ -28,3 +29,7 @@
         </form>
     </div>
 </div>
+<% } %>
+<% if(!currentUser) {%>
+    nothing to see here  
+    <% } %>

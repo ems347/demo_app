@@ -2,8 +2,8 @@ mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
     container: 'map', 
     style: 'mapbox://styles/mapbox/streets-v12',
-    center: [-8.017690,53.447936], 
-    zoom: 6,  
+    center: [160.216619,-28.322509], 
+    zoom: 4,  
 });
 
 map.on('load', () => {
@@ -29,11 +29,11 @@ map.on('load', () => {
     'circle-color': [
     'step',
     ['get', 'point_count'],
-    '#51bbd6',
+    '#962DEE',
     100,
-    '#f1f075',
+    '#962DEE',
     750,
-    '#f28cb1'
+    '#962DEE'
     ],
     'circle-radius': [
     'step',
@@ -65,7 +65,7 @@ map.on('load', () => {
     source: 'plastics',
     filter: ['!', ['has', 'point_count']],
     paint: {
-    'circle-color': '#11b4da',
+    'circle-color': '#962DEE',
     'circle-radius': 4,
     'circle-stroke-width': 1,
     'circle-stroke-color': '#fff'
