@@ -1,10 +1,4 @@
 const Blog = require('../models/blog');
-// const mbxGeocoding =  require('@mapbox/mapbox-sdk/services/geocoding');
-// const mapBoxToken = process.env.MAPBOX_TOKEN;
-// const geocoder = mbxGeocoding({accessToken: mapBoxToken});
-// const { cloudinary } = require('../utils/cloudinary'); 
-
-
 
 module.exports.index = async (req, res) => {
     const blogs = await Blog.find({})

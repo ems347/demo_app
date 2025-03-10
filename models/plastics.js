@@ -34,6 +34,6 @@ plasticsSchema.virtual('properties.popUpMarker').get(function()  {
   return `<img class="imgPopup" src="${this.image[0].url}">
   <p><strong>Title: </strong>${this.title}<br>
   <strong>Description: </strong>${this.description}</p>`
-})
+}) // this is the pop up on the map 
 
 module.exports = mongoose.model('Plastic', plasticsSchema);

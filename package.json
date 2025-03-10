@@ -18,7 +18,7 @@
     "passport-local-mongoose": "^8.0.0",
     "sanitize-html": "^2.10.0"
   },
-  "name": "bre_app",
+  "name": "map_app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

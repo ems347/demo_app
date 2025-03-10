@@ -1,10 +1,8 @@
 const express = require('express');
 const multer = require('multer');
 
-// const Plastic = require('../models/plastics');
-// const { findById } = require("../models/plastics");
+
 const catchAsync = require('../utils/catchAsync');
-// const {plasticSchema} = require('../schemas');
 const ExpressError = require('../utils/ExpressError');
 const { storage } = require('../utils/cloudinary');
 const submissions = require('../controllers/submissions');
