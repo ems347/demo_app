@@ -14,6 +14,7 @@ const plasticsSchema = mongoose.Schema({
     description: String,
     title: String,
     address: String,
+    muni: String,
     notes: String,
     latitude: Number,
     longitude: Number,

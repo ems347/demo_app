@@ -16,9 +16,13 @@ module.exports.renderNewSubmissionForm = (req, res) => {
 }
 
 module.exports.newSubmission = async (req, res, next) => {
+    let fullAddress = [];
+    fullAddress = req.body.address.concat(", ", req.body.muni).concat(", CA");
     const geoData = await geocoder.forwardGeocode({
-        query: req.body.address,
+        // query: req.body.address,
+        query: fullAddress,
         countries: ['us'],
+        bbox: [-123.515305, 38.260967, -121.124336, 37.224372],
         limit: 1
       }).send();
     const newPlastic = new Plastic(req.body);

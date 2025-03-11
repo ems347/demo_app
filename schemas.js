@@ -27,6 +27,7 @@ module.exports.plasticSchema = Joi.object({
         description: Joi.string().required(),
         title: Joi.string().required(),
         address: Joi.string().required(),
+        muni: Joi.string().required(),
         image: Joi.string(),
         deleteImages: Joi.array(),
         notes: Joi.string().allow('', null),

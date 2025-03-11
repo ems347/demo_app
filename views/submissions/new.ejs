@@ -5,8 +5,12 @@
     <div class="col-6 offset-3">
         <form action="/submissions" method="post" enctype="multipart/form-data" novalidate class="validated-form">
             <div class="mb-3">
-                <label for="address" class="form-label" id="address">full address of photo location </label>
-                <input type="text" class="form-control" name="address" id="address" placeholder="5 Robert St, Corrimal NSW 2518, Australia">
+                <label for="address" class="form-label" id="address">street address of location </label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="2020 Oregon St">
+            </div>
+            <div class="mb-3">
+                <label for="muni" class="form-label" id="muni">city of location </label>
+                <input type="text" class="form-control" name="muni" id="muni" placeholder="Berkeley">
             </div>
            <div class="mb-3">
             <label for="title" class="form-label" id="title">image title</label>
