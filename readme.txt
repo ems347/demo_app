@@ -56,8 +56,8 @@ controllers/submissions.js
 In module.exports.newSubmission is where you're doing the reverse geocoding. This is what allows someone to input a street address (1 Main St) and translate it into a latitude/longitude pair. You can add or change the "countries" here. You can also add a bounding box to limit queries to a specific region within the const geoData (note that latitude and longitude are switched from our normal frame of reference): 
 bbox: [-74.375745, 41.091585, -69.647465, 43.007157] (this box encompasses the state of Massachusetts)
 For a project focused on the Bay area, you want to pick two diagonal points that fully encompass your zone for results, so it might look something like: 
-bbox: [-123.515305, 38.260967, -121.124336, 37.224372] 
-The first pair is the upper left-hand corner and the second pair is the bottom right-hand corner of our bounding box in this example. 
+bbox: [-122.753872, 37.071358, -121.535869, 38.341397] 
+The first pair is the bottom left-hand corner and the second pair is the  upper right-hand corner of our bounding box in this example. Note that the coordinates must be in this order (bottom left, top right). 
 You can also help out the geocoder by hard-coding the state; you'll probably want to ask for the municipality in your submission form, which can then also be fed into the geocoder. 
 
 ### what is ejs 

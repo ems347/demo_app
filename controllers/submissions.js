@@ -22,7 +22,7 @@ module.exports.newSubmission = async (req, res, next) => {
         // query: req.body.address,
         query: fullAddress,
         countries: ['us'],
-        bbox: [-123.515305, 38.260967, -121.124336, 37.224372],
+        bbox: [-122.753872, 37.071358, -121.535869, 38.341397],
         limit: 1
       }).send();
     const newPlastic = new Plastic(req.body);
